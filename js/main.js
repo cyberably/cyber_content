@@ -381,9 +381,9 @@ backToTopBtn.addEventListener('click', function() {
 });
 
 // Console Welcome Message
-console.log('%c🛡️ Cyberably Academy', 'font-size: 24px; font-weight: bold; color: #00d4ff;');
+console.log('%c🛡️ Cyberably', 'font-size: 24px; font-weight: bold; color: #00d4ff;');
 console.log('%cWelcome to our website! Interested in cybersecurity training?', 'font-size: 14px; color: #8b5cf6;');
-console.log('%cContact us at: info@Cyberablyacademy.com', 'font-size: 12px; color: #666;');
+console.log('%cContact us at: cyberably@gmail.com', 'font-size: 12px; color: #666;');
 
 // Performance Monitoring (Development Only)
 if (window.performance) {
