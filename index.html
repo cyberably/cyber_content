@@ -1,21 +1,818 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cybersecurity & AI Security</title>
-  <meta name="description" content="Practical cybersecurity and AI security concepts explained simply." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional cybersecurity training programs, certifications, and courses for individuals and organizations.">
+    <title>CyberGuard Academy - Professional Cybersecurity Training</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-blue': '#00d4ff',
+                        'cyber-purple': '#8b5cf6',
+                        'cyber-dark': '#0a0e27',
+                        'cyber-darker': '#060917',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <nav>
-  <a href="index.html">Home</a> |
-  <a href="cybersecurity.html">Cybersecurity</a> |
-  <a href="ai-security.html">AI Security</a> |
-  <a href="about.html">About</a>
-</nav>
-<hr>
+<body class="font-inter bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-cyber-darker text-white fixed w-full top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-shield-halved text-cyber-blue text-3xl"></i>
+                    <span class="text-2xl font-bold">CyberGuard <span class="text-cyber-blue">Academy</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-cyber-blue transition duration-300 smooth-scroll">Home</a>
+                    <a href="#courses" class="hover:text-cyber-blue transition duration-300 smooth-scroll">Courses</a>
+                    <a href="#certifications" class="hover:text-cyber-blue transition duration-300 smooth-scroll">Certifications</a>
+                    <a href="#instructors" class="hover:text-cyber-blue transition duration-300 smooth-scroll">Instructors</a>
+                    <a href="#testimonials" class="hover:text-cyber-blue transition duration-300 smooth-scroll">Testimonials</a>
+                    <a href="#contact" class="bg-cyber-blue text-cyber-dark px-6 py-2 rounded-lg font-semibold hover:bg-white transition duration-300 smooth-scroll">Enroll Now</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 hover:text-cyber-blue transition smooth-scroll">Home</a>
+                <a href="#courses" class="block py-2 hover:text-cyber-blue transition smooth-scroll">Courses</a>
+                <a href="#certifications" class="block py-2 hover:text-cyber-blue transition smooth-scroll">Certifications</a>
+                <a href="#instructors" class="block py-2 hover:text-cyber-blue transition smooth-scroll">Instructors</a>
+                <a href="#testimonials" class="block py-2 hover:text-cyber-blue transition smooth-scroll">Testimonials</a>
+                <a href="#contact" class="block py-2 hover:text-cyber-blue transition smooth-scroll">Enroll Now</a>
+            </div>
+        </div>
+    </nav>
 
-  <h1>Cybersecurity in the Age of AI</h1>
-  <p>Explaining application security, cloud security, and AI threats in simple terms. SMT Suchitra Tiwari ka Damad or Chinu ke Jiya ki site par aapka swaagat hai! </p>
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-br from-cyber-darker via-cyber-dark to-purple-900 text-white pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-cyber-blue rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-cyber-blue/20 text-cyber-blue px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <i class="fas fa-award mr-2"></i>Industry-Leading Training
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Master <span class="text-cyber-blue">Cybersecurity</span> Skills
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Transform your career with hands-on training from industry experts. Learn ethical hacking, penetration testing, security operations, and more.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#courses" class="bg-cyber-blue text-cyber-dark px-8 py-4 rounded-lg font-bold hover:bg-white transition duration-300 text-center smooth-scroll">
+                            <i class="fas fa-graduation-cap mr-2"></i>Browse Courses
+                        </a>
+                        <a href="#contact" class="border-2 border-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-cyber-dark transition duration-300 text-center smooth-scroll">
+                            <i class="fas fa-phone mr-2"></i>Contact Us
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 mt-12">
+                        <div>
+                            <div class="text-4xl font-bold text-cyber-blue">15K+</div>
+                            <div class="text-gray-400 text-sm">Students Trained</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-cyber-blue">50+</div>
+                            <div class="text-gray-400 text-sm">Expert Instructors</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-cyber-blue">98%</div>
+                            <div class="text-gray-400 text-sm">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="relative">
+                        <div class="cyber-card bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-cyber-blue/30">
+                            <i class="fas fa-laptop-code text-cyber-blue text-8xl mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Hands-On Labs</h3>
+                            <p class="text-gray-300">Practice in real-world scenarios with our advanced lab environment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose CyberGuard Academy?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Industry-recognized training that prepares you for real-world cybersecurity challenges</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl hover:shadow-xl transition duration-300">
+                    <div class="bg-cyber-blue text-white w-16 h-16 rounded-lg flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Instructors</h3>
+                    <p class="text-gray-600">Learn from certified professionals with 15+ years of industry experience</p>
+                </div>
+                
+                <div class="feature-card bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl hover:shadow-xl transition duration-300">
+                    <div class="bg-cyber-purple text-white w-16 h-16 rounded-lg flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Practical Labs</h3>
+                    <p class="text-gray-600">Access 24/7 to virtual labs with real-world attack scenarios</p>
+                </div>
+                
+                <div class="feature-card bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl hover:shadow-xl transition duration-300">
+                    <div class="bg-green-500 text-white w-16 h-16 rounded-lg flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Industry Certifications</h3>
+                    <p class="text-gray-600">Prepare for CEH, CISSP, CompTIA Security+, and more</p>
+                </div>
+                
+                <div class="feature-card bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl hover:shadow-xl transition duration-300">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-lg flex items-center justify-center mb-4 text-2xl">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Career Support</h3>
+                    <p class="text-gray-600">Job placement assistance and career counseling included</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Training Programs</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive courses designed to take you from beginner to expert</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-user-secret text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">Beginner</span>
+                            <span class="text-gray-600 font-semibold"><i class="fas fa-clock mr-1"></i>12 Weeks</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Ethical Hacking Fundamentals</h3>
+                        <p class="text-gray-600 mb-4">Learn the basics of ethical hacking, penetration testing methodologies, and security assessment techniques.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Network scanning & enumeration</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Vulnerability assessment</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Web application security</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-bold text-gray-900">$1,299</span>
+                            <button class="enroll-btn bg-cyber-blue text-cyber-dark px-6 py-2 rounded-lg font-semibold hover:bg-cyber-dark hover:text-white transition duration-300">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 border-2 border-cyber-blue relative">
+                    <div class="absolute top-4 right-4 bg-cyber-blue text-cyber-dark px-3 py-1 rounded-full text-sm font-bold z-10">
+                        POPULAR
+                    </div>
+                    <div class="bg-gradient-to-r from-purple-600 to-pink-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-bug text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">Intermediate</span>
+                            <span class="text-gray-600 font-semibold"><i class="fas fa-clock mr-1"></i>16 Weeks</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Advanced Penetration Testing</h3>
+                        <p class="text-gray-600 mb-4">Master advanced exploitation techniques, post-exploitation, and comprehensive security testing methodologies.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Advanced exploitation techniques</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Privilege escalation</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Active Directory attacks</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-bold text-gray-900">$1,899</span>
+                            <button class="enroll-btn bg-cyber-blue text-cyber-dark px-6 py-2 rounded-lg font-semibold hover:bg-cyber-dark hover:text-white transition duration-300">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="bg-gradient-to-r from-green-600 to-teal-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Beginner</span>
+                            <span class="text-gray-600 font-semibold"><i class="fas fa-clock mr-1"></i>10 Weeks</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Security Operations Center (SOC)</h3>
+                        <p class="text-gray-600 mb-4">Become a SOC analyst and learn incident response, threat detection, and security monitoring.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>SIEM tools & log analysis</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Incident response procedures</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Threat intelligence</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-bold text-gray-900">$1,099</span>
+                            <button class="enroll-btn bg-cyber-blue text-cyber-dark px-6 py-2 rounded-lg font-semibold hover:bg-cyber-dark hover:text-white transition duration-300">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="bg-gradient-to-r from-red-600 to-orange-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-network-wired text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Intermediate</span>
+                            <span class="text-gray-600 font-semibold"><i class="fas fa-clock mr-1"></i>14 Weeks</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Network Security & Defense</h3>
+                        <p class="text-gray-600 mb-4">Master network security architecture, firewall configuration, and intrusion detection systems.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Firewall & IDS/IPS configuration</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>VPN & secure protocols</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Network segmentation</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-bold text-gray-900">$1,499</span>
+                            <button class="enroll-btn bg-cyber-blue text-cyber-dark px-6 py-2 rounded-lg font-semibold hover:bg-cyber-dark hover:text-white transition duration-300">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 5 -->
+                <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="bg-gradient-to-r from-indigo-600 to-blue-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-cloud text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-semibold">Advanced</span>
+                            <span class="text-gray-600 font-semibold"><i class="fas fa-clock mr-1"></i>12 Weeks</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Cloud Security Specialist</h3>
+                        <p class="text-gray-600 mb-4">Learn to secure AWS, Azure, and GCP environments with advanced cloud security practices.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>AWS/Azure/GCP security</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>IAM & identity management</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Container security</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-bold text-gray-900">$1,799</span>
+                            <button class="enroll-btn bg-cyber-blue text-cyber-dark px-6 py-2 rounded-lg font-semibold hover:bg-cyber-dark hover:text-white transition duration-300">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 6 -->
+                <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                    <div class="bg-gradient-to-r from-yellow-600 to-amber-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-code text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm font-semibold">Intermediate</span>
+                            <span class="text-gray-600 font-semibold"><i class="fas fa-clock mr-1"></i>14 Weeks</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Application Security & DevSecOps</h3>
+                        <p class="text-gray-600 mb-4">Integrate security into the development lifecycle and master secure coding practices.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Secure SDLC practices</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>OWASP Top 10 vulnerabilities</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>CI/CD security automation</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-bold text-gray-900">$1,599</span>
+                            <button class="enroll-btn bg-cyber-blue text-cyber-dark px-6 py-2 rounded-lg font-semibold hover:bg-cyber-dark hover:text-white transition duration-300">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Certification Preparation</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We prepare you for the most sought-after cybersecurity certifications</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="cert-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-certificate text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">CEH</h3>
+                    <p class="text-gray-600 text-sm mb-3">Certified Ethical Hacker</p>
+                    <div class="text-cyber-blue font-semibold">EC-Council</div>
+                </div>
+                
+                <div class="cert-card bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-shield-alt text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">CISSP</h3>
+                    <p class="text-gray-600 text-sm mb-3">Certified Information Systems Security Professional</p>
+                    <div class="text-purple-600 font-semibold">(ISC)²</div>
+                </div>
+                
+                <div class="cert-card bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-lock text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Security+</h3>
+                    <p class="text-gray-600 text-sm mb-3">CompTIA Security+</p>
+                    <div class="text-green-600 font-semibold">CompTIA</div>
+                </div>
+                
+                <div class="cert-card bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-user-shield text-red-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">OSCP</h3>
+                    <p class="text-gray-600 text-sm mb-3">Offensive Security Certified Professional</p>
+                    <div class="text-red-600 font-semibold">Offensive Security</div>
+                </div>
+                
+                <div class="cert-card bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-network-wired text-indigo-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">CCNA Security</h3>
+                    <p class="text-gray-600 text-sm mb-3">Cisco Certified Network Associate</p>
+                    <div class="text-indigo-600 font-semibold">Cisco</div>
+                </div>
+                
+                <div class="cert-card bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-eye text-yellow-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">CISM</h3>
+                    <p class="text-gray-600 text-sm mb-3">Certified Information Security Manager</p>
+                    <div class="text-yellow-600 font-semibold">ISACA</div>
+                </div>
+                
+                <div class="cert-card bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-cloud text-pink-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">CCSP</h3>
+                    <p class="text-gray-600 text-sm mb-3">Certified Cloud Security Professional</p>
+                    <div class="text-pink-600 font-semibold">(ISC)²</div>
+                </div>
+                
+                <div class="cert-card bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-xl text-center hover:shadow-xl transition duration-300">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-bug text-teal-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">GPEN</h3>
+                    <p class="text-gray-600 text-sm mb-3">GIAC Penetration Tester</p>
+                    <div class="text-teal-600 font-semibold">GIAC</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section id="instructors" class="py-20 bg-gradient-to-br from-cyber-darker to-cyber-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Meet Our Expert Instructors</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Learn from industry veterans with real-world experience</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="instructor-card bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-gray-800 transition duration-300">
+                    <div class="w-32 h-32 bg-gradient-to-br from-cyber-blue to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dr. Sarah Mitchell</h3>
+                    <p class="text-cyber-blue font-semibold mb-3">Lead Penetration Tester</p>
+                    <p class="text-gray-400 text-sm mb-4">20+ years experience, CEH, OSCP, CISSP certified</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-cyber-blue transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-cyber-blue transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="instructor-card bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-gray-800 transition duration-300">
+                    <div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">James Rodriguez</h3>
+                    <p class="text-purple-400 font-semibold mb-3">SOC Operations Expert</p>
+                    <p class="text-gray-400 text-sm mb-4">15+ years in SOC, GIAC GCIA, Security+ certified</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="instructor-card bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-gray-800 transition duration-300">
+                    <div class="w-32 h-32 bg-gradient-to-br from-green-500 to-teal-600 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Emily Chen</h3>
+                    <p class="text-green-400 font-semibold mb-3">Cloud Security Architect</p>
+                    <p class="text-gray-400 text-sm mb-4">12+ years cloud security, AWS/Azure certified</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="instructor-card bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-gray-800 transition duration-300">
+                    <div class="w-32 h-32 bg-gradient-to-br from-orange-500 to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Marcus Johnson</h3>
+                    <p class="text-orange-400 font-semibold mb-3">Malware Analyst</p>
+                    <p class="text-gray-400 text-sm mb-4">18+ years reverse engineering, GREM certified</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Students Say</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Success stories from graduates who transformed their careers</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-cyber-blue to-blue-600 rounded-full flex items-center justify-center text-white text-2xl mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Alex Thompson</h4>
+                            <p class="text-gray-600 text-sm">Security Engineer @ Google</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">"The Advanced Penetration Testing course was incredible! The hands-on labs and expert instructors helped me land my dream job. Highly recommend!"</p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Maria Garcia</h4>
+                            <p class="text-gray-600 text-sm">SOC Analyst @ Microsoft</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">"CyberGuard Academy prepared me perfectly for my Security+ certification. The instructors are world-class and truly care about your success."</p>
+                </div>
+                
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white text-2xl mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">David Kim</h4>
+                            <p class="text-gray-600 text-sm">Cloud Security @ AWS</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic">"The Cloud Security course gave me practical skills I use daily. Career support team helped me negotiate a 40% salary increase!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Training Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-cyber-darker to-purple-900 rounded-2xl p-12 text-white text-center">
+                <h2 class="text-4xl font-bold mb-6">Corporate Training Programs</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Upskill your entire team with customized training solutions. We offer on-site training, group discounts, and tailored curriculum for organizations.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div>
+                        <i class="fas fa-users text-cyber-blue text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2">Team Training</h3>
+                        <p class="text-gray-300">Custom programs for teams of 5+</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-building text-cyber-blue text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2">On-Site Delivery</h3>
+                        <p class="text-gray-300">Training at your location</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-certificate text-cyber-blue text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2">Custom Curriculum</h3>
+                        <p class="text-gray-300">Tailored to your needs</p>
+                    </div>
+                </div>
+                <a href="#contact" class="bg-cyber-blue text-cyber-dark px-8 py-4 rounded-lg font-bold hover:bg-white transition duration-300 inline-block smooth-scroll">
+                    Request Corporate Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Get Started Today</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Ready to transform your career? Contact us for enrollment or any questions</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Full Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyber-blue focus:border-transparent" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyber-blue focus:border-transparent" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyber-blue focus:border-transparent" placeholder="+1 (555) 123-4567">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Course Interest</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyber-blue focus:border-transparent">
+                                <option>Select a course...</option>
+                                <option>Ethical Hacking Fundamentals</option>
+                                <option>Advanced Penetration Testing</option>
+                                <option>Security Operations Center (SOC)</option>
+                                <option>Network Security & Defense</option>
+                                <option>Cloud Security Specialist</option>
+                                <option>Application Security & DevSecOps</option>
+                                <option>Corporate Training</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Message *</label>
+                            <textarea required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyber-blue focus:border-transparent" placeholder="Tell us about your goals..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-cyber-blue text-cyber-dark py-4 rounded-lg font-bold hover:bg-cyber-dark hover:text-white transition duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <div class="bg-gradient-to-br from-cyber-darker to-purple-900 p-8 rounded-xl text-white mb-6">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-cyber-blue text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Address</h4>
+                                    <p class="text-gray-300">1234 Cyber Street, Tech District<br>San Francisco, CA 94102</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone text-cyber-blue text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Phone</h4>
+                                    <p class="text-gray-300">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-cyber-blue text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <p class="text-gray-300">info@cyberguardacademy.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-cyber-blue text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Office Hours</h4>
+                                    <p class="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Follow Us</h3>
+                        <div class="grid grid-cols-4 gap-4">
+                            <a href="#" class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-700 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-500 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-blue-700 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-blue-800 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-red-600 text-white w-12 h-12 rounded-lg flex items-center justify-center hover:bg-red-700 transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyber-darker text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i class="fas fa-shield-halved text-cyber-blue text-3xl"></i>
+                        <span class="text-2xl font-bold">CyberGuard <span class="text-cyber-blue">Academy</span></span>
+                    </div>
+                    <p class="text-gray-400">Empowering the next generation of cybersecurity professionals through world-class training.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#courses" class="text-gray-400 hover:text-cyber-blue transition smooth-scroll">Courses</a></li>
+                        <li><a href="#certifications" class="text-gray-400 hover:text-cyber-blue transition smooth-scroll">Certifications</a></li>
+                        <li><a href="#instructors" class="text-gray-400 hover:text-cyber-blue transition smooth-scroll">Instructors</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-cyber-blue transition smooth-scroll">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Programs</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-cyber-blue transition">Ethical Hacking</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cyber-blue transition">Penetration Testing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cyber-blue transition">SOC Operations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cyber-blue transition">Cloud Security</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with the latest courses and cybersecurity news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-cyber-blue">
+                        <button type="submit" class="bg-cyber-blue text-cyber-dark px-4 py-2 rounded-r-lg font-semibold hover:bg-white transition">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 CyberGuard Academy. All rights reserved. | <a href="#" class="hover:text-cyber-blue transition">Privacy Policy</a> | <a href="#" class="hover:text-cyber-blue transition">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
 </body>
 </html>
