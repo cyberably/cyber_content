@@ -1,4 +1,4 @@
-// Cyberably Academy - Main JavaScript
+// Cyberably - Main JavaScript
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
